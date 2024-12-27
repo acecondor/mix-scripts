@@ -1,8 +1,9 @@
 #!/bin/bash
 # redirect stdout/stderr to a file
-exec >/var/scripts/ping_reboot.log 2>&1
+exec >/var/scripts/ping_reboot.log 2>&1 #replace 'exec >' with 'exec >>' for append all events
 
-echo 'Start script >>> '$(date '+%Y-%m-%d %H:%M:%S')
+echo '- - - - - - - - - - - - - - - - - - - - - -'
+echo $(date '+%Y-%m-%d %H:%M:%S')' >>> Start script'
 
 generate_ping_reboot_script() {
     #Define the hosts to ping
