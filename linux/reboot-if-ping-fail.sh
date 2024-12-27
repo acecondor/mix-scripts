@@ -1,4 +1,6 @@
 #!/bin/bash
+#cron: /10 * * * * /var/scripts/ping_reboot.sh >> /var/scripts/ping_reboot_cron.log 2>&1
+
 # redirect stdout/stderr to a file
 exec >/var/scripts/ping_reboot.log 2>&1 #replace 'exec >' with 'exec >>' for append all events
 
